@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-08-02T10:49:37Z" name="TCE WEB SUITE" finished-at="2019-08-02T10:50:18Z" duration-ms="40908">
+    <groups>
+    </groups>
+    <test started-at="2019-08-02T10:49:37Z" name="Login Test" finished-at="2019-08-02T10:50:09Z" duration-ms="31750">
+      <class name="automation.Login">
+        <test-method is-config="true" signature="setup()[pri:0, instance:automation.Login@402e37bc]" started-at="2019-08-02T10:49:37Z" name="setup" finished-at="2019-08-02T10:49:51Z" duration-ms="14419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginInvalidCredentials()[pri:1, instance:automation.Login@402e37bc]" started-at="2019-08-02T10:49:51Z" name="loginInvalidCredentials" description="Testcase1= Verify that error message is displayed on entering invalid data" finished-at="2019-08-02T10:49:53Z" duration-ms="1421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInvalidCredentials -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:automation.Login@402e37bc]" started-at="2019-08-02T10:49:53Z" name="TearDown" finished-at="2019-08-02T10:49:53Z" duration-ms="628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:automation.Login@402e37bc]" started-at="2019-08-02T10:49:53Z" name="setup" finished-at="2019-08-02T10:49:58Z" duration-ms="4197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginValidCredentials()[pri:2, instance:automation.Login@402e37bc]" started-at="2019-08-02T10:49:58Z" name="loginValidCredentials" description="Testcase2= Verify that User is able to log in succesfully on entering valid data" finished-at="2019-08-02T10:50:08Z" duration-ms="10414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidCredentials -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:automation.Login@402e37bc]" started-at="2019-08-02T10:50:08Z" name="TearDown" finished-at="2019-08-02T10:50:09Z" duration-ms="618" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- automation.Login -->
+    </test> <!-- Login Test -->
+    <test started-at="2019-08-02T10:50:09Z" name="Logout Test" finished-at="2019-08-02T10:50:18Z" duration-ms="9044">
+      <class name="automation.Logout">
+        <test-method is-config="true" signature="setup()[pri:0, instance:automation.Logout@7219ec67]" started-at="2019-08-02T10:50:09Z" name="setup" finished-at="2019-08-02T10:50:13Z" duration-ms="4115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="logoutAfterLogin()[pri:1, instance:automation.Logout@7219ec67]" started-at="2019-08-02T10:50:13Z" name="logoutAfterLogin" description="Testcase1= Verify that User is able to logout succesfully on clicking logout button" finished-at="2019-08-02T10:50:17Z" duration-ms="4303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutAfterLogin -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:automation.Logout@7219ec67]" started-at="2019-08-02T10:50:17Z" name="TearDown" finished-at="2019-08-02T10:50:18Z" duration-ms="622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- automation.Logout -->
+    </test> <!-- Logout Test -->
+  </suite> <!-- TCE WEB SUITE -->
+</testng-results>
