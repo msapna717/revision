@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.TCEWEB">
+      <class name="tce.LoginWithCredentialsTest">
         <methods>
-          <include name="setup"/>
           <include name="loginValidCredentials"/>
           <include name="TearDown"/>
+          <include name="VerifyLoginWithCredentialsPage"/>
+          <include name="setup"/>
+          <include name="loginInvalidCredentials"/>
         </methods>
-      </class> <!-- automation.TCEWEB -->
+      </class> <!-- tce.LoginWithCredentialsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,7 +2,8 @@
 <suite thread-count="1" verbose="1" name="TCE WEB SUITE" parallel="tests">
   <test name="Login Test">
     <classes>
-      <class name="tce.LoginTest"/>
+      <class name="tce.LoginWithCredentialsTest"/>
+      <class name="tce.LoginWithPin"/>
     </classes>
   </test>
 <test name="Logout Test">
