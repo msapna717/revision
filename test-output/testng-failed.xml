@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tce.LoginWithCredentialsTest">
+      <class name="com.revision.ExcelDataRead">
         <methods>
-          <include name="loginValidCredentials"/>
-          <include name="TearDown"/>
-          <include name="VerifyLoginWithCredentialsPage"/>
-          <include name="setup"/>
-          <include name="loginInvalidCredentials"/>
+          <include name="excelReading"/>
         </methods>
-      </class> <!-- tce.LoginWithCredentialsTest -->
+      </class> <!-- com.revision.ExcelDataRead -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,11 +1,17 @@
 package tce;
 
+import java.time.Duration;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -14,6 +20,8 @@ import org.testng.annotations.Test;
 public class LoginWithCredentialsTest {
 	private WebDriver driver;
 	private String baseUrl;
+//	private WebDriverWait wait;
+
 @BeforeMethod
 public void setup() {
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sapna Mishra\\Documents\\chromedriver\\chromedriver.exe");
@@ -21,14 +29,21 @@ public void setup() {
     baseUrl="http://10.10.0.160:8080/tceweb/#/";
     driver.get(baseUrl);
     driver.manage().window().maximize();
-    driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+//    driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+    
     }
 //if main testcase failes then depending testcases will not be executed and skipped by using depandsOnMethod
 @Test(priority=0,description = "Testcase1= Verify that User is on login with userId and password page")
 public void VerifyLoginWithCredentialsPage() throws InterruptedException {
-	WebElement loginWithPinText=driver.findElement(By.xpath("//p[contains(text(),'Please sign in using your account details ')]"));
-Thread.sleep(1000);
-Assert.assertEquals(loginWithPinText.isDisplayed(), true);
+	WebElement loginWithCredText=driver.findElement(By.xpath("//p[contains(text(),'Please sign in using your account details ')]"));
+//	 wait=new WebDriverWait(driver,10);
+	//loginWithCredText=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Please sign in using your account details ')]")));
+	Wait wait = new FluentWait(driver)
+			.withTimeout(Duration.ofSeconds(100))
+			.pollingEvery(Duration.ofMillis(600))
+		    .ignoring(NoSuchElementException.class);
+	//	Thread.sleep(1000);
+Assert.assertEquals(loginWithCredText.isDisplayed(), true);
 	
 }
 @Test(dependsOnMethods = {"VerifyLoginWithCredentialsPage"},priority=1,description = "Testcase1= Verify that error message is displayed on entering invalid data")
