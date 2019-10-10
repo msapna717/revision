@@ -1,0 +1,39 @@
+
+Alip Chattopadhyay <alip.chattopadhyay@ascendum.com>
+Attachments
+Fri, Oct 4, 1:44 AM (6 days ago)
+to ishan.sharma@sourcebits.com, me, amit.shukla@sourcebits.com
+
+Creating test env from git. Here are the steps –
+
+ 
+
+Pre-requisite
+
+ 
+
+Have node installed in your machine
+Pull a git branch
+ 
+
+Process
+
+=================================================
+
+Go to folder using bash (cmd)
+Type following command one by one
+ 
+
+npm i
+
+npm run start:mock
+
+ 
+
+ 
+
+Screen shot of qa env. Running in local
+http://localhost:4200/canvas
+ 
+
+We can also use the docker path. I did it at my end, but that is more time consuming.
